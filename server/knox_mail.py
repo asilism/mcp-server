@@ -23,7 +23,7 @@ async def send_mail(recipient_id: str, subject: str, body: str) -> dict:
     return {"status": "sent", "recipient": recipient_id, "subject": subject}
 
 @mcp.tool()
-async def list_unread_mails() -> dict:
+async def get_unread_mails() -> dict:
     """Returns header information of all unread emails in JSON format"""
     print("[LOG] list_unread_mails called")
     return {"unread": MAILBOX["unread"]}
